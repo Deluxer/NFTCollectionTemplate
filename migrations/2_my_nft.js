@@ -1,5 +1,5 @@
-const FunkyCrocs = artifacts.require("FunkyCrocs");
+const ElegantPuffin = artifacts.require("ElegantPuffin");
 
 module.exports = function (deployer) {
-  deployer.deploy(FunkyCrocs);
+  deployer.deploy(ElegantPuffin);
 };

@@ -4,7 +4,7 @@ pragma solidity 0.8.9;
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract FunkyCrocs is ERC721Enumerable, Ownable {  
+contract ElegantPuffin is ERC721Enumerable, Ownable {  
     using Address for address;
     
     // Starting and stopping sale, presale and whitelist
@@ -25,7 +25,7 @@ contract FunkyCrocs is ERC721Enumerable, Ownable {
     uint256 public constant MAX_MINT_PER_TX = 20;
 
     // The base link that leads to the image / video of the token
-    string public baseTokenURI = "https://api.funkycrocs.io/";
+    string public baseTokenURI = "https://api.mireino.com/";
 
     // Team addresses for withdrawals
     address public a1;

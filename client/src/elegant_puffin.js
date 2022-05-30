@@ -15,7 +15,7 @@ function metamaskReloadCallback()
     document.getElementById("web3_message").textContent="Accounts changed, realoading...";
     window.location.reload()
   })
-  window.ethereum.on('networkChanged', (accounts) => {
+  window.ethereum.on('chainChanged', (accounts) => {
     document.getElementById("web3_message").textContent="Network changed, realoading...";
     window.location.reload()
   })
@@ -25,7 +25,7 @@ const getAccounts = async () => {
   metamaskReloadCallback()
   try {
     await window.ethereum.request({ method: "eth_requestAccounts" })
-    resolve(web3)
+    return web3;
   } catch (error) {
     console.log(error)
   }
@@ -76,7 +76,7 @@ async function getRevertReason(txHash) {
 }
 
 const getContract = async (web3) => {
-  const response = await fetch("./contracts/FunkyCrocs.json");
+  const response = await fetch("./contracts/ElegantPuffin.json");
   const data = await response.json();
 
   const netId = await web3.eth.net.getId();
@@ -135,7 +135,7 @@ async function loadDapp() {
         };
         awaitContract();
       } else {
-        document.getElementById("web3_message").textContent="Please connect to Rinkeby Testnet";
+        document.getElementById("web3_message").textContent="Please connect to Kovan Testnet";
       }
     });
   };

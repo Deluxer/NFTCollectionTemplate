@@ -4,13 +4,13 @@ pragma solidity 0.8.9;
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
-contract FunkyCrocs is ERC721Enumerable, Ownable {  
+contract ElegantPuffin is ERC721Enumerable, Ownable {
     using Address for address;
-    
+
     // Starting and stopping sale, presale and whitelist
-    bool public saleActive = false;
     bool public whitelistActive = false;
     bool public presaleActive = false;
+    bool public saleActive = false;
 
     // Reserved for the team, customs, giveaways, collabs and so on.
     uint256 public reserved = 150;
@@ -20,12 +20,12 @@ contract FunkyCrocs is ERC721Enumerable, Ownable {
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
-    uint256 public constant MAX_SUPPLY = 10000;
+    uint256 public constant MAX_SUPPLY = 20;
     uint256 public constant MAX_PRESALE_SUPPLY = 500;
     uint256 public constant MAX_MINT_PER_TX = 20;
 
     // The base link that leads to the image / video of the token
-    string public baseTokenURI = "https://api.funkycrocs.io/";
+    string public baseTokenURI = "https://api.mireino.com/";
 
     // Team addresses for withdrawals
     address public a1;
@@ -35,7 +35,7 @@ contract FunkyCrocs is ERC721Enumerable, Ownable {
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Funky Crocs", "FNK") {
+    constructor () ERC721 ("Elegant Puffin", "EPF") {
         price = initial_price;
     }
 
@@ -103,7 +103,7 @@ contract FunkyCrocs is ERC721Enumerable, Ownable {
             _safeMint( msg.sender, supply + i );
         }
     }
-    
+
     // Edit reserved whitelist spots
     function editWhitelistReserved(address[] memory _a, uint256[] memory _amount) public onlyOwner {
         for(uint256 i; i < _a.length; i++){
