@@ -10,11 +10,11 @@ module.exports = {
       port: 8545,
       network_id: "*",
     },
-    kovan: {
+    rinkeby: {
       provider: function () {
         return new HDWalletProvider(process.env.PRIVATE_KEY, process.env.RINKEBY_RPC_URL);
       },
-      network_id: 42,
+      network_id: 4,
       skipDryRun: true,
     },
     mainnet: {
