@@ -16,7 +16,7 @@ contract ElegantPuffin is ERC721Enumerable, Ownable {
     uint256 public reserved = 150;
 
     // Price of each token
-    uint256 public initial_price = 0.02 ether;
+    uint256 public initial_price = 0.01 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
