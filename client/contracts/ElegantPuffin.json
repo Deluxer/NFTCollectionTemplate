@@ -30484,7 +30484,7 @@
     "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
   },
   "networks": {
-    "42": {
+    "4": {
       "events": {},
       "links": {},
       "address": "0x8C74A511f6C03953c9F2Bb067ACd34B475D96666",
