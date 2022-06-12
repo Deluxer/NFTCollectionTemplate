@@ -97,7 +97,7 @@ async function loadAccount() {
   balance = await contract.methods.balanceOf(accounts[0]).call()
   document.getElementById("web3_message").textContent="Connected"
   document.getElementById("connect_button").style.display = "none"
-  document.getElementById("nft_balance").textContent="You have " + balance + " Crocs"
+  document.getElementById("nft_balance").textContent="You have " + balance + " Puffin"
 }
 
 async function loadDapp() {
