@@ -16,7 +16,7 @@ contract ElegantPuffin is ERC721Enumerable, Ownable {
     uint256 public reserved = 150;
 
     // Price of each token
-    uint256 public initial_price = 0.01 ether;
+    uint256 public initial_price = 0.2 ether;
     uint256 public price;
 
     // Maximum limit of tokens that can ever exist
@@ -35,7 +35,7 @@ contract ElegantPuffin is ERC721Enumerable, Ownable {
     // List of addresses that have a number of reserved tokens for whitelist
     mapping (address => uint256) public whitelistReserved;
 
-    constructor () ERC721 ("Elegant Puffin", "EPF") {
+    constructor () ERC721 ("Elegant Puffin", "FNK") {
         price = initial_price;
     }
 
