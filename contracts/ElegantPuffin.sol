@@ -25,7 +25,7 @@ contract ElegantPuffin is ERC721Enumerable, Ownable {
     uint256 public constant MAX_MINT_PER_TX = 20;
 
     // The base link that leads to the image / video of the token
-    string public baseTokenURI = "https://a013-189-219-220-205.ngrok.io/";
+    string public baseTokenURI = "https://api-nft-test.herokuapp.com/";
 
     // Team addresses for withdrawals
     address public a1;

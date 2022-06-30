@@ -15,4 +15,4 @@
 4. Create a `.env` and put your private key and RPC url following the `.env.example` example
 5. `truffle deploy --network rinkeby`
 6. Copy `./bruild/MyNFTCollection.json` to `./client/contracts/MyNFTCollection.json`
-7. Deploy the `./client` directory to a public frontend server
+7. Deploy the `./client` directory to a public frontend server, run `lite-server`

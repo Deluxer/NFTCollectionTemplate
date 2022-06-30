@@ -78,13 +78,13 @@ async function getRevertReason(txHash) {
 const getContract = async (web3) => {
   const response = await fetch("./contracts/ElegantPuffin.json");
   const data = await response.json();
-
   const netId = await web3.eth.net.getId();
   const deployedNetwork = data.networks[netId];
   contract = new web3.eth.Contract(
     data.abi,
     deployedNetwork && deployedNetwork.address
     );
+    
   return contract
 }
 
@@ -263,7 +263,7 @@ const setBaseURI = async () => {
 }
 
 const setPrice = async () => {
-  const result = await contract.methods.setPrice("0")//(10000000)
+  const result = await contract.methods.setPrice("40000000000000000")//(4000000000000000000 = 4 eth)
     .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
       document.getElementById("web3_message").textContent="Minting...";
